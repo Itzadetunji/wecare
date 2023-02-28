@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 @import url("https://fonts.cdnfonts.com/css/raleway-5");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700;900&display=swap");
 
 html,
 body {
 	padding: 0;
 	margin: 0;
 	font-family: "Raleway", sans-serif;
+}
+
+.montserratAlternatesFont {
+	font-family: "Montserrat Alternates", sans-serif;
 }
