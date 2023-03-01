@@ -5,10 +5,12 @@ import HeroText from "@/components/HeroText";
 import HeroImage from "@/components/HeroImage";
 import PricingSystem from "@/components/PricingSystem";
 import OurServices from "@/components/OurServices";
+import Navbar from "@/components/Navbar";
 
 const Home: NextPage = () => {
 	return (
 		<main>
+			<Navbar />
 			<section className="bg-[#FDFAFF]">
 				<HeroText />
 				<HeroImage />
