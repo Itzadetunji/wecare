@@ -9,11 +9,11 @@ import OurServices from "@/components/OurServices";
 const Home: NextPage = () => {
 	return (
 		<main>
-			{/* <section className="bg-[#FDFAFF]">
+			<section className="bg-[#FDFAFF]">
 				<HeroText />
 				<HeroImage />
 			</section>
-			<PricingSystem /> */}
+			<PricingSystem />
 			<OurServices />
 		</main>
 	);
