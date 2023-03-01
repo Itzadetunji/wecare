@@ -7,7 +7,7 @@ const HeroText = () => {
 					<span className="font-black text-[#552BCC]">
 						customer care
 					</span>{" "}
-					<br className="hidden sm:block"/> &{" "}
+					<br className="hidden sm:block" /> &{" "}
 					<span className="font-black text-[#552BCC]">
 						communication
 					</span>{" "}

@@ -15,7 +15,7 @@ const OurServicesCard: React.FC<OurServicesCardProps> = ({
 }) => {
 	return (
 		<div
-			className={`flex justify-between items-center gap-10 ${
+			className={`flex justify-between items-center gap-10 rounded-[10px] ${
 				img === 1 && "bg-[#FFF7F1]"
 			} ${img === 2 && "bg-[#F1F5FF]"} ${img === 3 && "bg-[#FBF1FF]"}`}
 		>
