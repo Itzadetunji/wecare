@@ -5,7 +5,16 @@ module.exports = {
 	],
 	theme: {},
 	variants: {
-		extend: {},
+		extend: {
+			colors: {
+				purple: {
+					100: "#E5DCFF",
+					200: "#552BCC",
+					300: "#120C24",
+				},
+				gray: { 100: "#1E1E1E" },
+			},
+		},
 	},
 	plugins: [],
 };
