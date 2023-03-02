@@ -6,7 +6,7 @@ const PricingSystem = () => {
 			<div className="flex justify-between flex-col xl:flex-row gap-[40px] sm:gap-[60px]">
 				<header className="">
 					<h1 className="text-[28px] sm:text-[36px] text-center xl:text-left font-black leading-[44px] text-[#552BCC]">
-						Pricing <br className="hidden xl:block"/> System
+						Pricing <br className="hidden xl:block" /> System
 					</h1>
 				</header>
 				<div className="grid max-w-[634px] lg:max-w-none mx-auto grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[40px]">
