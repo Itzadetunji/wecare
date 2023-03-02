@@ -151,7 +151,7 @@ const HeroImage = () => {
 								/>
 							</span>
 						</p>
-						<div className="flex w-[250px] sm:w-full mx-auto flex-wrap gap-[20px] mt-[19px]">
+						<div className="flex  sm:w-full  flex-wrap gap-[20px] mt-[19px]">
 							<div className="flex gap-[3px] items-center text-[8px] py-[9px] bg-[#F5F1FF] text-[#1D0E4A] rounded-[5px] w-full max-w-[80px] lg:max-w-[108.5px] justify-center">
 								<img src="/images/briefIcon.svg" />
 								Brief 2020
