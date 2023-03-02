@@ -2,12 +2,12 @@ const HeroText = () => {
 	return (
 		<section className="pt-[150px] px-[20px]">
 			<header className="flex justify-center">
-				<h1 className="max-w-[400px] sm:max-w-none text-[24px] lg:text-[32px] xl:text-[40px] font-bold montserratAlternatesFont leading-[30px] lg:leading-[40px]  xl:leading-[49px]  sm:text-left">
+				<h1 className="max-w-[400px] sm:max-w-none text-[24px] lg:text-[32px] xl:text-[40px] font-bold montserratAlternatesFont leading-[30px] lg:leading-[40px]  xl:leading-[49px]  text-center">
 					Simplify your{" "}
 					<span className="font-black text-[#552BCC]">
 						customer care
 					</span>{" "}
-					<br className="hidden sm:block"/> &{" "}
+					<br className="hidden sm:block" /> &{" "}
 					<span className="font-black text-[#552BCC]">
 						communication
 					</span>{" "}
