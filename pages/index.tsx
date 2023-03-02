@@ -6,6 +6,7 @@ import HeroImage from "@/components/HeroImage";
 import PricingSystem from "@/components/PricingSystem";
 import OurServices from "@/components/OurServices";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Home: NextPage = () => {
 	return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
 			</section>
 			<PricingSystem />
 			<OurServices />
+			<Footer />
 		</main>
 	);
 };
