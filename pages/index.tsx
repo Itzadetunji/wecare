@@ -16,8 +16,8 @@ const Home: NextPage = () => {
 				<HeroText />
 				<HeroImage />
 			</section>
-			<PricingSystem />
 			<OurServices />
+			<PricingSystem />
 			<Footer />
 		</main>
 	);
