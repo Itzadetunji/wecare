@@ -28,7 +28,7 @@ const OurServicesCard: React.FC<OurServicesCardProps> = ({
 					Get Wecare ---
 				</button>
 			</div>
-			<div className="w-[70%] h-[300px] relative cursor-pointer max-w-[340px] self-end">
+			<figure className="w-[70%] h-[300px] relative cursor-pointer max-w-[340px] self-end">
 				<Image
 					src={`/images/our-services/${img}.png`}
 					alt="Back button"
@@ -36,7 +36,7 @@ const OurServicesCard: React.FC<OurServicesCardProps> = ({
 					style={{ objectFit: "contain" }}
 					className="cursor-pointer"
 				/>
-			</div>
+			</figure>
 		</div>
 	);
 };

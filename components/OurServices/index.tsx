@@ -4,7 +4,7 @@ import OurServicesCard from "../OurServicesCard";
 
 const OurServices: NextPage = () => {
 	return (
-		<section className="flex flex-col justify-between mx-28">
+		<section className="flex flex-col px-28 mx-auto max-w-[1440px]">
 			<div className="flex justify-between">
 				<p className="text-[#552BCC] text-[40px] font-black">
 					Attend to your <br /> customers enquiry with ease.
