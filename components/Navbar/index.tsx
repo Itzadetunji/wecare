@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 
 const Navbar: NextPage = () => {
 	return (
-		<nav className="mx-auto px-28 py-5 flex items-center justify-between max-w-[1440px]">
+		<nav className="mx-auto px-8 xl:px-28 py-5 flex items-center justify-between max-w-[1440px]">
 			<figure className="w-[50px] h-[50px] relative cursor-pointer max-w-[340px] self-end">
 				<Image
 					src={`/images/logo.png`}
@@ -14,7 +14,7 @@ const Navbar: NextPage = () => {
 					className="cursor-pointer"
 				/>
 			</figure>
-			<ul className="flex gap-20 text-[#1E1E1E] select-none">
+			<ul className="flex gap-5 lg:gap-10 xl:gap-20 text-[#1E1E1E] select-none">
 				<li className="cursor-pointer hover:text-[#30157A] duration-300">
 					Home
 				</li>
@@ -31,7 +31,7 @@ const Navbar: NextPage = () => {
 					Contact
 				</li>
 			</ul>
-			<button className="flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-48 rounded-[10px]">
+			<button className="flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-40 lg:w-48 rounded-[10px]">
 				Become a client
 			</button>
 		</nav>

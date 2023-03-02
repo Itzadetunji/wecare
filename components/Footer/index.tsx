@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Footer: NextPage = () => {
 	return (
-		<footer className="bg-[#30157A] mt-10 py-20 px-14">
-			<div className="mx-auto flex flex-wrap items-center justify-between max-w-[1440px] items-center">
+		<footer className="bg-[#30157A] mt-10 pt-20 pb-10 px-14">
+			<div className="mx-auto flex flex-wrap items-center justify-between max-w-[1440px]">
 				<div className="">
 					<figure className="w-36 h-8 relative cursor-pointer max-w-[340px] self-end">
 						<Image
@@ -18,7 +18,10 @@ const Footer: NextPage = () => {
 						/>
 					</figure>
 					<div className="flex flex-col gap-2.5 text-white mt-8">
-						<a href="tel:+" className="text-xl font-medium">
+						<a
+							href="tel:+2348068204085"
+							className="text-xl font-medium"
+						>
 							+234-806-8204-085
 						</a>
 						<a href="mailto:support@wecare.com">
@@ -86,15 +89,33 @@ const Footer: NextPage = () => {
 				</form>
 			</div>
 			<hr className="px-14 mx-auto opacity-20 mt-16 max-w-[1440px]" />
-			<div className="flex justify-between max-w-[1440px]">
-				<div>
-					<figure>
+			<div className="flex justify-between max-w-[1440px] mt-9">
+				<div className="flex gap-5">
+					<figure className="flex items-center justify-center border-[1.5px] rounded-full h-10 w-10">
 						<Image
-							src="/images/arrow.svg"
+							src="/icons/linkedin.svg"
 							alt="Back button"
-							width={13}
-							height={18}
-							className="cursor-pointer"
+							width={14}
+							height={11}
+							className="cursor-pointer select-none"
+						/>
+					</figure>
+					<figure className="flex items-center justify-center border-[1.5px] rounded-full h-10 w-10">
+						<Image
+							src="/icons/facebook.svg"
+							alt="Back button"
+							width={8}
+							height={15}
+							className="cursor-pointer select-none"
+						/>
+					</figure>
+					<figure className="flex items-center justify-center border-[1.5px] rounded-full h-10 w-10">
+						<Image
+							src="/icons/twitter.svg"
+							alt="Back button"
+							width={15}
+							height={10}
+							className="cursor-pointer select-none"
 						/>
 					</figure>
 				</div>
