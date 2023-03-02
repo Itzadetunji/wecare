@@ -1,8 +1,8 @@
 const HeroText = () => {
 	return (
-		<section className="pt-[150px] px-[20px]">
+		<section className="pt-[150px] px-[30px]">
 			<header className="flex justify-center">
-				<h1 className="max-w-[400px] sm:max-w-none text-[24px] lg:text-[32px] xl:text-[40px] font-bold montserratAlternatesFont leading-[30px] lg:leading-[40px]  xl:leading-[49px]  text-center">
+				<h1 className="max-w-[400px] sm:max-w-none text-[24px] lg:text-[32px] xl:text-[40px] font-bold montserratAlternatesFont leading-[30px] lg:leading-[40px]  xl:leading-[49px]  text-center lg:text-left">
 					Simplify your{" "}
 					<span className="font-black text-[#552BCC]">
 						customer care

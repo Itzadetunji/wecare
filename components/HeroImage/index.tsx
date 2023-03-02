@@ -1,7 +1,7 @@
 const HeroImage = () => {
 	return (
 		<>
-			<section className="max-w-[1240px] mx-auto mt-[90px] justify-between gap-[40px] pb-[135px] hidden lg:flex">
+			<section className="max-w-[1240px] mx-auto mt-[90px] justify-between gap-[40px] pb-[70px] lg:pb-[135px] hidden lg:flex">
 				<figure className="flex items-center">
 					<img
 						className="min-w-[392px]  2xl:min-w-[419px] z-20 relative"
@@ -132,7 +132,10 @@ const HeroImage = () => {
 					/>
 
 					<figure>
-						<img className="min-w-[30px] min-h-[30px]" src="/images/user2.png" />
+						<img
+							className="min-w-[30px] min-h-[30px]"
+							src="/images/user2.png"
+						/>
 					</figure>
 					<article className="text-[10px]">
 						<p className="mb-[13px] mt-[5px] font-bold">
@@ -140,9 +143,9 @@ const HeroImage = () => {
 						</p>
 						<p>
 							Good morning, <br /> Please find attached your
-							transaction statement from 2020 till 2022.<br /> I believe
-							that this would be useful in your visa application.
-							We wish you all the best.
+							transaction statement from 2020 till 2022.
+							<br /> I believe that this would be useful in your
+							visa application. We wish you all the best.
 							<br /> Have a blessed day. {"  "}
 							<span>
 								<img
