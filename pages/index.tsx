@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import HeroText from "@/components/HeroText";
 import HeroImage from "@/components/HeroImage";
 import PricingSystem from "@/components/PricingSystem";
+import "@/styles/globals.css";
 import OurServices from "@/components/OurServices";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
