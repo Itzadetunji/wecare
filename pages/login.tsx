@@ -37,7 +37,7 @@ const LoginPage: NextPage = () => {
 					Forgot password?
 				</p>
 			</Link>
-			<button className="text-white w-full h-[50px] lg:h-[60px] bg-[#552BCC] rounded-[5px] mt-[50px]">
+			<button className="text-white w-full h-[50px] lg:h-[60px] bg-[#552BCC] rounded-[5px] mt-[35px] lg:mt-[50px]">
 				Login
 			</button>
 			<p className="text-center mt-[15px] lg:mt-[20px]">
