@@ -2,7 +2,7 @@ import PricingSystemCard from "../PricingSystemCard";
 
 const PricingSystem = () => {
 	return (
-		<section className="w-full px-[30px] sm:px-14 xl:px-28 mx-auto">
+		<section className="w-full px-[30px] sm:px-14 xl:px-28 mx-auto max-w-[1440px]">
 			<div className="flex justify-between flex-col xl:flex-row gap-[40px] sm:gap-[60px]">
 				<header className="">
 					<h1 className="text-[28px] sm:text-[36px] text-center xl:text-left font-black leading-[44px] text-[#552BCC]">
