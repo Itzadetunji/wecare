@@ -26,9 +26,18 @@ const ForgotPasswordPage: NextPage = () => {
 				</p>
 			</Link>
 			<section className="flex flex-col mt-[50px] gap-[24px]">
-				<OpenMailItem iconPath={"/images/AuthenticationPages/gmailIcon.png"} text="Open Gmail" />
-				<OpenMailItem iconPath={"/images/AuthenticationPages/emailApp.png"} text="Open Email App"/>
-				<OpenMailItem iconPath={"/images/AuthenticationPages/outlookApp.png"} text="Open Outlook"/>
+				<OpenMailItem
+					iconPath={"/images/AuthenticationPages/gmailIcon.png"}
+					text="Open Gmail"
+				/>
+				<OpenMailItem
+					iconPath={"/images/AuthenticationPages/emailApp.png"}
+					text="Open Email App"
+				/>
+				<OpenMailItem
+					iconPath={"/images/AuthenticationPages/outlookApp.png"}
+					text="Open Outlook"
+				/>
 			</section>
 
 			<p className="text-center mt-[24px] lg:mt-[35px]">
