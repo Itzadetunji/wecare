@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import type { NextPage } from "next";
+import { InitialMessage } from "@/components/user/InitialMessage";
 
 const Chat: NextPage = () => {
 	return (
 		<>
-			<section className="flex-1 self-stretch overflow-scroll mx-8 mb-48 mt-5">
+			<section className="flex-1 self-stretch overflow-y-hidden mx-8 mb-48 mt-5">
 				<InitialMessage />
 			</section>
 			<section className="w-full px-8 fixed bottom-0 bg-white">
@@ -42,58 +43,3 @@ const Chat: NextPage = () => {
 };
 
 export default Chat;
-
-const InitialMessage: React.FC = () => {
-	const actions = [
-		"Account Opening",
-		"Account Reactivation",
-		"Account Restriction",
-		"Balance Enquiry",
-		"Money Transfer",
-		"Airtime",
-		"Data Purchase",
-		"Bills Payment",
-		"Block Card",
-		"Account Statement",
-		"Log Complaints",
-		"ATM/Branch Locator",
-		"Agent Locator",
-		"Reset PIN",
-		"Loan Request",
-	];
-	const alphabets = (capital = false) => {
-		return [...Array(26)].map((_, i) =>
-			String.fromCharCode(i + (capital ? 65 : 97))
-		);
-	};
-	return (
-		<div className="px-5 py-4 flex flex-col gap-2 border-[0.5px] border-[#E5DCFF] rounded-[5px]">
-			<figure className="flex gap-1 items-center">
-				<Image
-					src={"/images/gtbank.jpg"}
-					alt={""}
-					width={25}
-					height={25}
-					className="rounded-full"
-				/>
-				<figcaption className="font-medium text-xs">GTBank</figcaption>
-			</figure>
-			<div className="text-xs text-[#324054]">
-				<p>
-					Hello and welcome James. I&apos;m Caris from GTBank; I can
-					assist with your transactions and inquiries. What would you
-					like to begin with?
-				</p>
-				<br />
-				<div>
-					{actions.map((q, i) => (
-						<div key={i} className="flex flex-row">
-							<p>*{alphabets()[i].toUpperCase()}.*</p>
-							<p>{q}</p>
-						</div>
-					))}
-				</div>
-			</div>
-		</div>
-	);
-};
