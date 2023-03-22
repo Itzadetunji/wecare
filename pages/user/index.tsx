@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Chat from "./chat";
 
 const User: NextPage = () => {
-	const [state, setState] = useState<number>(1);
+	const [state, setState] = useState<number>(2);
 	return (
 		<>
 			<main className="flex flex-col justify-between mx-8 h-full">
