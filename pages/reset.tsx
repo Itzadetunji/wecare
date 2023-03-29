@@ -2,6 +2,7 @@ import AuthenticationPageWrapper from "@/components/AuthenticationPageWrapper";
 import InputField from "@/components/InputField";
 import { Loader } from "@/components/Loader";
 import { useForgotResetCompany } from "@/hooks/useCompanyData";
+import { Toast } from "@/utils/toast";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,13 +21,28 @@ const ResetPassword: NextPage = () => {
 		error,
 	} = useForgotResetCompany();
 
+	const checkPasswordRequirements = (password: string) => {
+		const regex =
+			/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[^\dA-Za-z]).{8,}$/;
+		return regex.test(password);
+	};
+
 	useEffect(() => {
 		const { token: queryToken } = router.query;
 		setToken(queryToken);
 	}, [router.isReady, router.query]);
 
 	const handleForgotPassword = () => {
-		forgotResetCompany({ newPassword, confirmNewPassword, token });
+		if (
+			checkPasswordRequirements(newPassword) &&
+			checkPasswordRequirements(confirmNewPassword)
+		) {
+			forgotResetCompany({ newPassword, confirmNewPassword, token });
+		} else {
+			Toast.info(
+				"Both passwords must match and follow the new password qualities"
+			);
+		}
 	};
 	return (
 		<AuthenticationPageWrapper>
