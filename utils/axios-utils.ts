@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
 const client = axios.create({
-	baseURL: "https://127.0.0.1:4000/api",
+	baseURL: "http://127.0.0.1:4000/api",
 	headers: {
 		Accept: "application/json",
 		// Authorization:

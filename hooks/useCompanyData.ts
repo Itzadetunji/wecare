@@ -16,7 +16,11 @@ const createCompany = (data: any) => {
 };
 
 const loginCompany = (data: any) => {
-	return request({ url: `/auth/`, method: "post", data });
+	return request({ url: `/auth`, method: "post", data });
+};
+
+const forgotCompany = (data: any) => {
+	return request({ url: `/forgot`, method: "post", data });
 };
 
 const logoutCompany = (data: any) => {
@@ -73,19 +77,43 @@ export const useLoginCompany = () => {
 			) {
 				throw new Error(data);
 			}
-			setCookie("rf-token", data.data.refresh_token, 1);
-			setCookie("ac-token", data.data.access_token, 1);
-			setCookie("username", data.data.user.username, 1);
-			setCookie("market", data.data.user.customer_profile.market, 1);
-			// const user = jwt.sign(data.data.customer_profile, "HaD1R0cks", {
-			// 	algorithm: "RS256",
-			// });
-			// setCookie("customer_details", user, 1);
-			router.push("/");
+			setCookie("token", data.data.token, 1);
+			Toast.success("Login successful!");
 			console.log(data);
+			setTimeout(() => {
+				router.push("/");
+			}, 3000);
 		},
 		onError: (error: any) => {
 			Toast.error("Error: Could not login please try again later");
+			console.log(error);
+		},
+	});
+};
+
+export const useForgotCompany = () => {
+	const queryClient = useQueryClient();
+	const router = useRouter();
+
+	return useMutation(forgotCompany, {
+		onSuccess: (data: any) => {
+			if (
+				data.response &&
+				data.response.status >= 400 &&
+				data.response.status < 500
+			) {
+				throw new Error(data);
+			}
+			Toast.success(
+				"An Email has been sent to your email address. Kindly check it out"
+			);
+			console.log(data);
+			setTimeout(() => {
+				router.push("/login");
+			}, 3000);
+		},
+		onError: (error: any) => {
+			Toast.error("Error: Could not send email reset link");
 			console.log(error);
 		},
 	});

@@ -20,7 +20,7 @@ const ForgotPasswordPage: NextPage = () => {
 				<span className="font-semibold">james@ubagroup.com </span>with
 				instructions on how to reset password.
 			</p>
-			<Link href="/forgot_password">
+			<Link href="/forgot">
 				<p className="text-[15px] text-[#552BCC] mt-[20px]">
 					Change email address
 				</p>
