@@ -22,6 +22,14 @@ const loginCompany = (data: any) => {
 const forgotCompany = (data: any) => {
 	return request({ url: `/forgot`, method: "post", data });
 };
+const forgotResetCompany = (data: any) => {
+	console.log("token");
+	return request({
+		url: `/forgot/reset/forgot/${data.token}`,
+		method: "post",
+		data,
+	});
+};
 
 const logoutCompany = (data: any) => {
 	return request({ url: "/users/logout/", method: "post", data });
@@ -109,11 +117,37 @@ export const useForgotCompany = () => {
 			);
 			console.log(data);
 			setTimeout(() => {
-				router.push("/login");
+				router.push("/check_email");
 			}, 3000);
 		},
 		onError: (error: any) => {
 			Toast.error("Error: Could not send email reset link");
+			console.log(error);
+		},
+	});
+};
+
+export const useForgotResetCompany = () => {
+	const queryClient = useQueryClient();
+	const router = useRouter();
+
+	return useMutation(forgotResetCompany, {
+		onSuccess: (data: any) => {
+			if (
+				data.response &&
+				data.response.status >= 400 &&
+				data.response.status < 500
+			) {
+				throw new Error(data);
+			}
+			Toast.success("Reset successful! Kindly login");
+			console.log(data);
+			setTimeout(() => {
+				router.push("/login");
+			}, 3000);
+		},
+		onError: (error: any) => {
+			Toast.error("Error: Could not verify token.");
 			console.log(error);
 		},
 	});
