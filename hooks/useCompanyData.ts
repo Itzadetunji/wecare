@@ -85,7 +85,7 @@ export const useLoginCompany = () => {
 			) {
 				throw new Error(data);
 			}
-			setCookie("token", data.data.token, 1);
+			setCookie("auth", data.data.token, 1);
 			Toast.success("Login successful!");
 			console.log(data);
 			setTimeout(() => {
