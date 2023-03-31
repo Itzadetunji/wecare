@@ -87,7 +87,7 @@ const Dashboard = () => {
 						className="mt-[80px] flex gap-x-[57px]"
 					>
 						<TicketSection />
-						<ViewTicketSection />
+						{/* <ViewTicketSection /> */}
 					</motion.div>
 				)}
 				{/* </AnimatePresence> */}
