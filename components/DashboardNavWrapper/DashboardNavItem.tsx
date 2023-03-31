@@ -154,7 +154,7 @@ const DashboardNavItem: React.FC<DashboardNavItemProps> = ({
 		<motion.div
 			whileTap={{ scale: 0.92 }}
 			whileHover={{ scale: 1.04 }}
-			onClick={setCurrentPage ? () => setCurrentPage(name) : () => {}}
+			onClick={setCurrentPage ? () => setCurrentPage(name) : undefined}
 			style={{ backgroundColor: selected ? "#EFF6FF" : "#FFF" }}
 			className="w-full p-[12px] bg-white flex justify-between  items-center rounded-[4px] cursor-pointer transition duration-300"
 		>

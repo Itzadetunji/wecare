@@ -29,8 +29,9 @@ const ReasonForRequestSection = () => {
 				Reason For Request
 			</p>
 			<div className="flex flex-col w-full gap-[46px]">
-				{reasonStatisticsData.map((item) => (
+				{reasonStatisticsData.map((item, index) => (
 					<ReasonStatisticVisualisation
+						key={index}
 						reasonText={item.reason}
 						percentage={item.percentage}
 						color={item.color}
