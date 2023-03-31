@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useCountUp } from 'use-count-up'
+import { useCountUp } from "use-count-up";
 
 interface ServiceLevelPieProps {
 	percentage: number;
@@ -10,11 +10,11 @@ const ServiceLevelPie: React.FC<ServiceLevelPieProps> = ({
 	percentage,
 	target,
 }) => {
-    const { value } = useCountUp({
-        isCounting: true,
-        end: percentage,
-        duration: 1.5,
-      })
+	const { value } = useCountUp({
+		isCounting: true,
+		end: percentage,
+		duration: 1.5,
+	});
 
 	return (
 		<div className="w-[204px] h-[204px] relative">

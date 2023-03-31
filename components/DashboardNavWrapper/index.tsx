@@ -33,14 +33,14 @@ const DashboardNavWrapper: React.FC<DashboardNavWrapperProps> = ({
 						<DashboardNavItem
 							setCurrentPage={setCurrentPage}
 							name="Tickets"
-                            selected={currentPage == "Tickets"}
-                            numberCount={10}
+							selected={currentPage == "Tickets"}
+							numberCount={10}
 						/>
 						<DashboardNavItem
 							setCurrentPage={setCurrentPage}
 							name="Messages"
-                            selected={currentPage == "Messages"}
-                            numberCount={2}
+							selected={currentPage == "Messages"}
+							numberCount={2}
 						/>
 						<DashboardNavItem
 							setCurrentPage={setCurrentPage}
@@ -57,28 +57,28 @@ const DashboardNavWrapper: React.FC<DashboardNavWrapperProps> = ({
 						<div>
 							<DashboardNavItem
 								name="Notifications"
-                                setCurrentPage={setCurrentPage}
-                                selected={false}
-                                numberCount={5}
+								setCurrentPage={setCurrentPage}
+								selected={false}
+								numberCount={5}
 							/>
 							<DashboardNavItem
 								name="Settings"
-                                setCurrentPage={setCurrentPage}
-                                selected={false}
+								setCurrentPage={setCurrentPage}
+								selected={false}
 							/>
 							<DashboardNavItem
 								name="Logout"
-                                setCurrentPage={setCurrentPage}
-                                selected={false}
+								setCurrentPage={setCurrentPage}
+								selected={false}
 							/>
 						</div>
 						<UserDetails />
 					</div>
 				</section>
-            </nav>
-            <section className="pt-[55px] px-[50px] max-h-screen overflow-auto">
-                {children}
-            </section>
+			</nav>
+			<section className="pt-[55px] px-[50px] max-h-screen overflow-auto">
+				{children}
+			</section>
 		</main>
 	);
 };

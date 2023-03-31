@@ -1,8 +1,7 @@
 import TicketItem from "./TicketItem";
 
 interface TicketSectionProps {
-    ticketTitle: string;
-    
+	ticketTitle: string;
 }
 
 const TicketSection = () => {

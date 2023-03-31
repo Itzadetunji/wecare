@@ -31,7 +31,9 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
 				</div>
 			</div>
 			<p className="mt-[19px]">{text}</p>
-			<p className="text-[45px] font-semibold">{number.toLocaleString()} </p>
+			<p className="text-[45px] font-semibold">
+				{number.toLocaleString()}{" "}
+			</p>
 		</div>
 	);
 };

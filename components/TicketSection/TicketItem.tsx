@@ -1,10 +1,14 @@
 interface TicketItemProps {
 	ticketTitle: string;
-    ticketId: string;
-    severity: string;
+	ticketId: string;
+	severity: string;
 }
 
-const TicketItem: React.FC<TicketItemProps> = ({ ticketTitle, ticketId, severity }) => {
+const TicketItem: React.FC<TicketItemProps> = ({
+	ticketTitle,
+	ticketId,
+	severity,
+}) => {
 	return (
 		<div className="w-full py-[13px] px-[14px] bg-white rounded-[5px]">
 			<div className="flex justify-between items-center">
