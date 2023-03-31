@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import type { NextPage } from "next";
 import { InitialMessage } from "@/components/user/InitialMessage";
 import { BotMessage } from "@/components/user/BotMessage";
 import { ResponseMessage } from "@/components/user/ResponseMessage";
+import { Toast } from "@/utils/toast";
 
 const Chat: NextPage = () => {
 	const data = [
@@ -39,6 +40,8 @@ const Chat: NextPage = () => {
 		},
 	];
 
+	const [message, setMessage] = useState("");
+
 	return (
 		<>
 			<section className="flex-1 self-stretch overflow-y-hidden mx-8 mb-48 mt-5 flex flex-col gap-4">
@@ -55,12 +58,22 @@ const Chat: NextPage = () => {
 				<form
 					method="post"
 					className="w-full flex flex-col gap-1.5 justify-between px-5 py-4 h-32 bg-[#F5F1FF] mb-10"
+					onSubmit={() => {
+						Toast.info("This conversation has ended");
+						setMessage("");
+					}}
 				>
 					<textarea
 						name=""
 						id=""
 						className="bg-[#F5F1FF] w-full text-sm placeholder:text-[#324054] flex-1 outline-none resize-none"
 						placeholder="Write your response to"
+						value={message}
+						onChange={(
+							e: React.ChangeEvent<HTMLTextAreaElement>
+						) => {
+							setMessage(e.target.value);
+						}}
 					/>
 					<div className="flex gap-3 montserratAlternatesFont self-end">
 						<button className="bg-white flex items-center gap-0.5 w-fit px-2.5 py-2 rounded-[5px]">
@@ -74,7 +87,14 @@ const Chat: NextPage = () => {
 								Attach Files
 							</p>
 						</button>
-						<button className="px-5 py-2 text-sm font-semibold text-white bg-[#552BCC] rounded-[5px]">
+						<button
+							className="px-5 py-2 text-sm font-semibold text-white bg-[#552BCC] rounded-[5px]"
+							onClick={(e) => {
+								e.preventDefault();
+								Toast.info("This conversation has ended");
+								setMessage("");
+							}}
+						>
 							Send
 						</button>
 					</div>

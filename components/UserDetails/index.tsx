@@ -6,7 +6,7 @@ const UserDetails = () => {
 				className="w-[40px] h-[40px] object-cover rouded-full border border-[#D9D9D9]"
 			/>
 			<div className="text-[12px] items-center">
-				<p className="text-[#324054]">Ebubechi Ezewanne</p>
+				<p className="text-[#324054]">Ronald Dosunmu</p>
 				<p className="text-[#71839B]">support@gtbank.com</p>
 			</div>
 		</div>
