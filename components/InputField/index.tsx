@@ -21,6 +21,7 @@ const InputField: React.FC<InputFieldProps> = ({
 				value={value}
 				onChange={(e) => setValue(e.target.value)}
 				className="w-full border-[0.5px] border-[#C2C2C2] focus:outline-none py-[14px] lg:py-[22px] text-[12px] font-light px-[20px] lg:px-[30px] rounded-[5px]"
+				autoComplete="true"
 			></input>
 		</div>
 	);
