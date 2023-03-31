@@ -89,7 +89,7 @@ export const useLoginCompany = () => {
 			Toast.success("Login successful!");
 			console.log(data);
 			setTimeout(() => {
-				router.push("/");
+				router.push("/dashboard");
 			}, 3000);
 		},
 		onError: (error: any) => {
