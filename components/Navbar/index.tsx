@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
 const Navbar: NextPage = () => {
+	const router = useRouter();
 	return (
 		<nav className="mx-auto px-8 xl:px-28 py-5 flex items-center justify-between max-w-[1440px]">
 			<figure className="w-[50px] h-[50px] relative cursor-pointer max-w-[340px] self-end">
@@ -31,7 +33,10 @@ const Navbar: NextPage = () => {
 					Contact
 				</li>
 			</ul>
-			<button className="flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-40 lg:w-48 rounded-[10px]">
+			<button
+				onClick={() => router.push("/login")}
+				className="flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-40 lg:w-48 rounded-[10px]"
+			>
 				Become a client
 			</button>
 		</nav>
