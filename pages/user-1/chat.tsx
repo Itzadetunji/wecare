@@ -6,52 +6,50 @@ import { BotMessage } from "@/components/user/BotMessage";
 import { ResponseMessage } from "@/components/user/ResponseMessage";
 
 const Chat: NextPage = () => {
+	const data = [
+		{
+			user: "I lost my debit card. What should I do?",
+			chatbot:
+				"We're sorry to hear that. Please block your card immediately by sending a message to our customer service, and we'll help you get a new card.",
+		},
+		{
+			user: "Okay, how do I send a message to customer service?",
+			chatbot:
+				"You can either send an email to our customer service team or contact us through our online chat service. Would you like me to provide you with the email address or the link to our online chat?",
+		},
+		{
+			user: "Can you please give me the email address?",
+			chatbot:
+				"Sure thing, the email address is customerservice@bankname.com. Once you send the email, one of our representatives will get back to you shortly to assist you with the card replacement process. Can you please provide me with your name and account number, so we can verify your identity?",
+		},
+		{
+			user: "My name is Jane Doe, and my account number is 987654.",
+			chatbot:
+				"Thank you, Jane. We will verify your account information and take the necessary steps to block your lost card and issue a new one. In order to get the new card to you as quickly as possible, could you please provide us with your house address?",
+		},
+		{
+			user: "Yes, my house address is 123 Main Street.",
+			chatbot:
+				"Great, we have your name, account number, and house address. Based on your location, we can assign the closest bank branch to you for you to pick up your new card. The branch address is 789 Elm Street. Is there anything else I can assist you with at this time?",
+		},
+		{
+			user: "No, that's all. Thank you for your help.",
+			chatbot:
+				"You're welcome, Jane. We're sorry for any inconvenience this may have caused you, but we will do our best to resolve the issue as quickly as possible. If you have any further questions or concerns, don't hesitate to contact us.",
+		},
+	];
+
 	return (
 		<>
 			<section className="flex-1 self-stretch overflow-y-hidden mx-8 mb-48 mt-5 flex flex-col gap-4">
 				<InitialMessage />
-				<ResponseMessage
-					text={"Hi, can you help me open a new bank account?"}
-				/>
-				<BotMessage
-					text={
-						"We will need your full name, date of birth, email address, phone number, and residential address. Do you have all of that information ready?"
-					}
-				/>
-				<ResponseMessage text={"Yes, I do."} />
-				<BotMessage
-					text={
-						"Great! Can you please provide your full name and date of birth?"
-					}
-				/>
-				<ResponseMessage
-					text={
-						" My name is John Doe and my date of birth is January 1st, 1990."
-					}
-				/>
-				<BotMessage
-					text={
-						"Thank you, John. Can you also provide your email address and phone number?"
-					}
-				/>
-				<ResponseMessage
-					text={
-						"My email is johndoe@email.com and my phone number is 123-456-7890."
-					}
-				/>
-				<BotMessage
-					text={
-						"Thank you. Lastly, can you provide your residential address?"
-					}
-				/>
-				<ResponseMessage
-					text={"Sure, it's 123 Main St, Anytown, USA."}
-				/>
-				<BotMessage
-					text={
-						"Excellent, thank you for that information, John. We'll need to verify your identity and may need additional information from you. You will receive an email from us when your account has been created. Is there anything else you'd like to know about opening an account with us?"
-					}
-				/>
+				{data.map((i, index) => (
+					<ResponseMessage
+						key={index}
+						user={i.user}
+						chatbot={i.chatbot}
+					/>
+				))}
 			</section>
 			<section className="w-full px-8 fixed bottom-0 bg-white">
 				<form

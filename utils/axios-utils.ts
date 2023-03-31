@@ -1,11 +1,9 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
 const client = axios.create({
-	baseURL: "http://127.0.0.1:4000/api",
+	baseURL: "https://wecare-xuqd.onrender.com/api",
 	headers: {
 		Accept: "application/json",
-		// Authorization:
-		// 	"Authorization: Api-Key EMf0lDuH.Mz1Pljd5drzy4kFpqIIjKP1byYPDOWN1",
 	},
 });
 
