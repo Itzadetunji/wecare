@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import { InitialMessage } from "@/components/user/InitialMessage";
 import { BotMessage } from "@/components/user/BotMessage";
 import { ResponseMessage } from "@/components/user/ResponseMessage";
+import { Toast } from "@/utils/toast";
 
 const Chat: NextPage = () => {
 	const data = [
