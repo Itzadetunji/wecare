@@ -14,7 +14,7 @@ const Navbar: NextPage = () => {
 					className="cursor-pointer"
 				/>
 			</figure>
-			<ul className="flex gap-5 lg:gap-10 xl:gap-20 text-[#1E1E1E] select-none">
+			<ul className="hidden lg:flex gap-5 lg:gap-10 xl:gap-20 text-[#1E1E1E] select-none">
 				<li className="cursor-pointer hover:text-[#30157A] duration-300">
 					Home
 				</li>
@@ -31,7 +31,7 @@ const Navbar: NextPage = () => {
 					Contact
 				</li>
 			</ul>
-			<button className="flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-40 lg:w-48 rounded-[10px]">
+			<button className="hidden lg:flex items-center justify-center bg-[#30157A] text-white text-sm h-11 w-40 lg:w-48 rounded-[10px]">
 				Become a client
 			</button>
 		</nav>

@@ -10,7 +10,7 @@ const PricingSystemCard: React.FC<PricingSystemCardProps> = ({
 	return (
 		<div className="w-full relative">
 			<img className="w-[297px]" src={imagePath} />
-			<p className="absolute bottom-[20px] left-[10px] lg:bottom-[20px] xl:bottom-[25px] 2xl:bottom-[36px] sm:left-[20px] font-extrabold text-white text-[20px] text-[27px] xl:text-[27px] 2xl:text-[33px]">
+			<p className="absolute bottom-[20px] left-[10px] lg:bottom-[20px] xl:bottom-[25px] 2xl:bottom-[36px] sm:left-[20px] font-extrabold text-white text-xl xl:text-[27px] 2xl:text-[33px]">
 				{description}
 			</p>
 		</div>
