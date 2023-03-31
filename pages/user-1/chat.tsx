@@ -15,7 +15,7 @@ const Chat: NextPage = () => {
 		{
 			user: "Okay, how do I send a message to customer service?",
 			chatbot:
-				"You can either send an email to our customer service team or contact us through our online chat service. Would you like me to provide you with the email address or the link to our online chat?",
+				"You can either send an email to our customer service team. Would you like me to provide you with the email address",
 		},
 		{
 			user: "Can you please give me the email address?",
@@ -23,19 +23,19 @@ const Chat: NextPage = () => {
 				"Sure thing, the email address is customerservice@bankname.com. Once you send the email, one of our representatives will get back to you shortly to assist you with the card replacement process. Can you please provide me with your name and account number, so we can verify your identity?",
 		},
 		{
-			user: "My name is Jane Doe, and my account number is 987654.",
+			user: "My name is Adetunji Adeyinka, and my account number is 1234.",
 			chatbot:
 				"Thank you, Jane. We will verify your account information and take the necessary steps to block your lost card and issue a new one. In order to get the new card to you as quickly as possible, could you please provide us with your house address?",
 		},
 		{
-			user: "Yes, my house address is 123 Main Street.",
+			user: "Yes, my house address 4, Joseph Adesanya Street.",
 			chatbot:
 				"Great, we have your name, account number, and house address. Based on your location, we can assign the closest bank branch to you for you to pick up your new card. The branch address is 789 Elm Street. Is there anything else I can assist you with at this time?",
 		},
 		{
 			user: "No, that's all. Thank you for your help.",
 			chatbot:
-				"You're welcome, Jane. We're sorry for any inconvenience this may have caused you, but we will do our best to resolve the issue as quickly as possible. If you have any further questions or concerns, don't hesitate to contact us.",
+				"You're welcome, Adetunji. We're sorry for any inconvenience this may have caused you, but we will do our best to resolve the issue as quickly as possible. If you have any further questions or concerns, don't hesitate to contact us.",
 		},
 	];
 
